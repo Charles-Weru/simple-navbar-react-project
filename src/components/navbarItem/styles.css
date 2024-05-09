@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+:root {
+  --CLR: #222327;
+}
+ul {
+  display: flex;
+  position: relative;
+  /* width: 350px; */
+}
+.list {
+  list-style: none;
+
+  width: 70px;
+}
+
+a {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.icon {
+  font-size: x-large;
+  cursor: pointer;
+  z-index: 2;
+}
+.icon-active {
+  margin-top: -35px;
+}
+
+.text {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.active {
+  opacity: 1;
+  transform: translateY(14px);
+}
+
+.indicator {
+  position: absolute;
+  left: 4px;
+  width: 64px;
+  height: 64px;
+  background-color: #29fd53;
+  border: 6px solid var(--CLR);
+  border-radius: 50%;
+  top: -24px;
+  z-index: 1;
+  transition: transform 0.6s;
+}
+.indicator:hover {
+  transform: translateX(16px);
+}
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: -24px;
+  width: 23px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 23px;
+  box-shadow: 2px -7px 0 0 var(--CLR);
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: -24px;
+  width: 23px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 23px;
+  box-shadow: 0px -8px 0 0 var(--CLR);
+}
